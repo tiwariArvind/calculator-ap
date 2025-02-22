@@ -27,4 +27,10 @@ RSpec.describe StringCalculator do
     end
   end
 
+  context "Support different delimiters" do
+    it "returns the sum of all numbers" do
+      expect(StringCalculator.add("//;\n1;2;3")).to eql(6)
+    end
+  end
+
 end
